@@ -7,8 +7,10 @@ Validator is simply to use, just call the method which correspond to your valida
 
 ## How it works
 Some usage examples of the library
-#### IntegerValidator
 
+********************************************
+#### IntegerValidator
+********************************************
 List of IntegerValidator methods :
   - isEqual()
   - isSuperior()
@@ -41,9 +43,9 @@ $validation = \JB\Validator\IntegerValidator::isNegative($integer);
 var_dump($validation);
 
 ```
-
+***********************************************
 #### BooleanValidator
-
+***********************************************
 List of BooleanValidator methods :
   - isTrue()
   - isFalse()
@@ -61,9 +63,9 @@ $validation = \JB\Validator\BooleanValidator::isTrue($boolean);
 var_dump($validation);
 
 ```
-
+*************************************************
 #### StringValidator
-
+*************************************************
 List of StringValidator methods :
   - lengthIsEqualTo()
   - lengthIsSuperiorTo()
@@ -99,3 +101,4 @@ var_dump($validation);
 ```
 
 ### Hope you enjoy it !
+*******************************************************
