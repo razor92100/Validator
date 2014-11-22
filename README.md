@@ -7,7 +7,7 @@ Validator is simply to use, just call the method which correspond to your valida
 
 ## How it works
 Some usage examples of the library
-### IntegerValidator
+#### IntegerValidator
 
 List of IntegerValidator methods :
   - isEqual()
@@ -42,7 +42,7 @@ var_dump($validation);
 
 ```
 
-### BooleanValidator
+#### BooleanValidator
 
 List of BooleanValidator methods :
   - isTrue()
@@ -62,7 +62,7 @@ var_dump($validation);
 
 ```
 
-### StringValidator
+#### StringValidator
 
 List of StringValidator methods :
   - lengthIsEqualTo()
