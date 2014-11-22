@@ -88,7 +88,7 @@ $validation = \JB\Validator\StringValidator::lengthIsSuperiorTo($string, 25);
 $validation = \JB\Validator\StringValidator::lengthIsInferiorTo($string, 30);
 
 // Here we check if the string has not whitespaces at the beginning and at the end
-$validation = \JB\Validator\StringValidator::noWhiteSpaceBeginAndEnd($string);
+$validation = \JB\Validator\StringValidator::noWhiteSpace($string);
 
 // Here we check if the string has not whitespaces
 $validation = \JB\Validator\StringValidator::noWhiteSpaceBeginAndEnd($string);
