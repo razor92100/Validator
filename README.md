@@ -6,7 +6,7 @@ Validator is simply to use, just call the method which correspond to your valida
 *All methods return true if the validation is validate and false if it isn't.*
 
 ## How it works
-
+Some usage examples of the library
 ### IntegerValidator
 
 List of IntegerValidator methods :
