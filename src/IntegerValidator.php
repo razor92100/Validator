@@ -20,7 +20,7 @@ class IntegerValidator
      * @return bool
      */
     public static function isEqual($nb1, $nb2) {
-        if ((int) $nb1 === (int) $nb2) {
+        if ( (int) $nb1 === (int) $nb2 ) {
             return true;
         }else{
             return false;
@@ -33,7 +33,7 @@ class IntegerValidator
      * @return bool
      */
     public static function isSuperior($nb1, $nb2) {
-        if ((int) $nb1 > (int) $nb2) {
+        if ( (int) $nb1 > (int) $nb2 ) {
             return true;
         }else{
             return false;
@@ -46,7 +46,7 @@ class IntegerValidator
      * @return bool
      */
     public static function isInferior($nb1, $nb2) {
-        if ((int) $nb1 < (int) $nb2) {
+        if ( (int) $nb1 < (int) $nb2 ) {
             return true;
         }else{
             return false;
@@ -60,8 +60,8 @@ class IntegerValidator
      * @return bool
      */
     public static function isBetween($nb, $min, $max) {
-        if ((int) $nb >= (int) $min){
-            if ((int) $nb <= (int) $max) {
+        if ( (int) $nb >= (int) $min ){
+            if ( (int) $nb <= (int) $max ) {
                 return true;
             }else{
                 return false;
@@ -76,7 +76,7 @@ class IntegerValidator
      * @return bool
      */
     public static function isNegative($nb) {
-        if (0 >= (int) $nb) {
+        if ( 0 >= (int) $nb ) {
             return true;
         }else{
             return false;
@@ -88,7 +88,7 @@ class IntegerValidator
      * @return bool
      */
     public static function isPositive($nb) {
-        if (0 <= (int) $nb) {
+        if ( 0 <= (int) $nb ) {
             return true;
         }else{
             return false;

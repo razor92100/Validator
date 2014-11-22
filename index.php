@@ -8,7 +8,7 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-$test = true;
+$test = 'abcdefghijl';
 
-$validation = \JB\Validator\BooleanValidator::isFalse($test);
+$validation = \JB\Validator\StringValidator::lengthIsSuperiorTo($test,15);
 var_dump($validation);
