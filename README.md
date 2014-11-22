@@ -19,11 +19,6 @@ List of IntegerValidator methods :
 
 ```php
 <?php
-// Simply create a new variable $validation to see the result of the validation
-// Choose the validation method you care about
-// Pass the $integer you want to validate into the parameter of the method
-// You're done :)
-
 // Here we check if the integer is equal to number 13
 $validation = \JB\Validator\IntegerValidator::isEqual($integer, 13);
 
@@ -55,12 +50,11 @@ List of BooleanValidator methods :
 
 ```php
 <?php
-// Simply create a new variable $validation to see the result of the validation
-// Choose the validation method you care about
-// Pass the $boolean you want to validate into the parameter of the method
-// You're done :)
 
 // Here we check if the boolean is true
+$validation = \JB\Validator\BooleanValidator::isTrue($boolean);
+
+// Here we check if the boolean is false
 $validation = \JB\Validator\BooleanValidator::isTrue($boolean);
 
 // Debug $validation to see the result
@@ -80,13 +74,24 @@ List of StringValidator methods :
 
 ```php
 <?php
-// Simply create a new variable $validation to see the result of the validation
-// Choose the validation method you care about
-// Pass the $string you want to validate into the parameter of the method
-// You're done :)
+
+// Here we check if the string length is equal to 120
+$validation = \JB\Validator\StringValidator::lengthIsSuperiorTo($string, 120);
+
+// Here we check if the string length is between 30 and 100
+$validation = \JB\Validator\StringValidator::lengthIsSuperiorTo($string, 30, 100);
+
+// Here we check if the string length is superior to 25
+$validation = \JB\Validator\StringValidator::lengthIsSuperiorTo($string, 25);
 
 // Here we check if the string length is inferior to 30
 $validation = \JB\Validator\StringValidator::lengthIsInferiorTo($string, 30);
+
+// Here we check if the string has not whitespaces at the beginning and at the end
+$validation = \JB\Validator\StringValidator::noWhiteSpaceBeginAndEnd($string);
+
+// Here we check if the string has not whitespaces
+$validation = \JB\Validator\StringValidator::noWhiteSpaceBeginAndEnd($string);
 
 // Debug $validation to see the result
 var_dump($validation);
