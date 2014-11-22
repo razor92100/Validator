@@ -24,7 +24,7 @@ class BooleanValidator
      * @return bool
      */
     public static function isTrue($boolean){
-        if( filter_var($boolean, FILTER_VALIDATE_BOOLEAN) ){
+        if( filter_var($boolean, FILTER_VALIDATE_BOOLEAN) ) {
             return true;
         }else{
             return false;
@@ -36,7 +36,7 @@ class BooleanValidator
      * @return bool
      */
     public static function isFalse($boolean){
-        if( !filter_var($boolean, FILTER_VALIDATE_BOOLEAN, [ 'flags' => FILTER_NULL_ON_FAILURE]) ){
+        if( !filter_var($boolean, FILTER_VALIDATE_BOOLEAN, [ 'flags' => FILTER_NULL_ON_FAILURE]) ) {
             return true;
         }else{
             return false;

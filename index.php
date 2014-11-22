@@ -10,5 +10,5 @@ require __DIR__.'/vendor/autoload.php';
 
 $test = 'abcdefghijl';
 
-$validation = \JB\Validator\StringValidator::lengthIsSuperiorTo($test,15);
+$validation = \JB\Validator\StringValidator::lengthIsSuperiorTo( $test, 15 );
 var_dump($validation);

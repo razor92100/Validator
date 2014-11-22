@@ -9,27 +9,67 @@
 namespace JB\Validator;
 
 
+/**
+ * Class StringValidator
+ * @package JB\Validator
+ */
 class StringValidator
 {
-    public static function lengthIsEqualTo($string, $length){
-        if( $length === mb_strlen($string) ){
+    /**
+     * @param string $string
+     * @param int $length
+     * @return bool
+     */
+    public static function lengthIsEqualTo($string, $length) {
+        if( $length === mb_strlen($string) ) {
             return true;
         }else{
             return false;
         }
     }
-    public static function lengthIsSuperiorTo($string, $limit){
+
+    /**
+     * @param string $string
+     * @param int $limit
+     * @return bool
+     */
+    public static function lengthIsSuperiorTo($string, $limit) {
         $length = mb_strlen($string);
-        if( $limit < $length){
+        if( $limit < $length) {
             return true;
         }else{
             return false;
         }
     }
-    public static function lengthIsInferiorTo($string, $limit){
+
+    /**
+     * @param string $string
+     * @param int $limit
+     * @return bool
+     */
+    public static function lengthIsInferiorTo($string, $limit) {
         $length = mb_strlen($string);
-        if( $limit > $length){
+        if( $limit > $length) {
             return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * @param string $string
+     * @param int $min
+     * @param int $max
+     * @return bool
+     */
+    public static function lengthBetween($string, $min, $max) {
+        $length = mb_strlen($string);
+        if( $min <= $length ){
+            if( $max >= $length ){
+                return true;
+            }else{
+                return false;
+            }
         }else{
             return false;
         }
