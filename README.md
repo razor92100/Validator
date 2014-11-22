@@ -2,6 +2,7 @@
 
 Validator is a small library that allow you to validate lots of data like integer, string, boolean, array and DateTime.
 Validator is simply to use, just call the method which correspond to your validation wishes and see if you're good or not.
+
 All methods return true if the validation is validate and false if it isn't.
 
 ## How it works
