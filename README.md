@@ -7,10 +7,30 @@ All methods return true if the validation is validate and false if it isn't.
 
 ## How it works
 
+### IntegerValidator
+
 ```php
 <?php
 // Simply create a new variable $validation to see the result of the validation
 // Choose the validation method you care about
+// Pass the $integer you want to validate into the parameter of the method
+// You're done :)
+
+// Here we check if the integer is positive
+$validation = \JB\Validator\IntegerValidator::isPositive($integer);
+
+// Debug $validation to see the result
+var_dump($validation);
+
+```
+
+### BooleanValidator
+
+```php
+<?php
+// Simply create a new variable $validation to see the result of the validation
+// Choose the validation method you care about
+// Pass the $integer you want to validate into the parameter of the method
 // You're done :)
 
 // Here we check if the integer is positive
