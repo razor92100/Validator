@@ -8,5 +8,7 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-$validation = \JB\Validator\IntegerValidator::isPositive(-0,2);
+$test = true;
+
+$validation = \JB\Validator\BooleanValidator::isFalse($test);
 var_dump($validation);
