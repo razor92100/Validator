@@ -8,6 +8,7 @@ Validator is simply to use, just call the method which correspond to your valida
 ## How it works
 
 ### IntegerValidator
+
 List of IntegerValidator methods :
   - isEqual()
   - isSuperior()
@@ -33,6 +34,10 @@ var_dump($validation);
 
 ### BooleanValidator
 
+List of BooleanValidator methods :
+  - isTrue()
+  - isFalse()
+
 ```php
 <?php
 // Simply create a new variable $validation to see the result of the validation
@@ -42,6 +47,31 @@ var_dump($validation);
 
 // Here we check if the boolean is true
 $validation = \JB\Validator\BooleanValidator::isTrue($boolean);
+
+// Debug $validation to see the result
+var_dump($validation);
+
+```
+
+### StringValidator
+
+List of StringValidator methods :
+  - lengthIsEqualTo()
+  - lengthIsSuperiorTo()
+  - lengthIsInferiorTo()
+  - lengthBetween()
+  - noWhiteSpaceBeginAndEnd()
+  - noWhiteSpace()
+
+```php
+<?php
+// Simply create a new variable $validation to see the result of the validation
+// Choose the validation method you care about
+// Pass the $string you want to validate into the parameter of the method
+// You're done :)
+
+// Here we check if the string length is inferior to 30
+$validation = \JB\Validator\StringValidator::lengthIsInferiorTo($string, 30);
 
 // Debug $validation to see the result
 var_dump($validation);
