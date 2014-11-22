@@ -21,9 +21,9 @@ class StringValidator
      * @return bool
      */
     public static function lengthIsEqualTo($string, $length) {
-        if( $length === mb_strlen($string) ) {
+        if ($length === mb_strlen($string)) {
             return true;
-        }else{
+        }else {
             return false;
         }
     }
@@ -35,9 +35,9 @@ class StringValidator
      */
     public static function lengthIsSuperiorTo($string, $limit) {
         $length = mb_strlen($string);
-        if( $limit < $length) {
+        if ($limit < $length) {
             return true;
-        }else{
+        }else {
             return false;
         }
     }
@@ -49,9 +49,9 @@ class StringValidator
      */
     public static function lengthIsInferiorTo($string, $limit) {
         $length = mb_strlen($string);
-        if( $limit > $length) {
+        if ($limit > $length) {
             return true;
-        }else{
+        }else {
             return false;
         }
     }
@@ -64,13 +64,39 @@ class StringValidator
      */
     public static function lengthBetween($string, $min, $max) {
         $length = mb_strlen($string);
-        if( $min <= $length ){
-            if( $max >= $length ){
+        if ($min <= $length) {
+            if ($max >= $length) {
                 return true;
-            }else{
+            }else {
                 return false;
             }
-        }else{
+        }else {
+            return false;
+        }
+    }
+
+    /**
+     * @param string $string
+     * @return bool
+     */
+    public static function noWhiteSpaceBeginAndEnd($string) {
+        $firstChar = substr($string, 0, 1);
+        $lastChar = substr($string, -1);
+        if (ctype_space($firstChar) && ctype_space($lastChar)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    /**
+     * @param string $string
+     * @return bool
+     */
+    public static function noWhiteSpace($string) {
+        if (strpos($string, ' ') == false) {
+            return true;
+        }else {
             return false;
         }
     }
