@@ -24,8 +24,23 @@ List of IntegerValidator methods :
 // Pass the $integer you want to validate into the parameter of the method
 // You're done :)
 
+// Here we check if the integer is equal to number 13
+$validation = \JB\Validator\IntegerValidator::isEqual($integer, 13);
+
+// Here we check if the integer is superior to number 50
+$validation = \JB\Validator\IntegerValidator::isSuperior($integer, 50);
+
+// Here we check if the integer is inferior to number 200
+$validation = \JB\Validator\IntegerValidator::isInferior($integer, 200);
+
+// Here we check if the integer is between number 10 and 100
+$validation = \JB\Validator\IntegerValidator::isInferior($integer, 10, 100);
+
 // Here we check if the integer is positive
 $validation = \JB\Validator\IntegerValidator::isPositive($integer);
+
+// Here we check if the integer is negative
+$validation = \JB\Validator\IntegerValidator::isNegative($integer);
 
 // Debug $validation to see the result
 var_dump($validation);
