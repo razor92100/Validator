@@ -11,19 +11,19 @@ namespace JB\Validator;
 
 class ArrayValidator
 {
-    public static function isEmpty(){
+    public static function isEmpty($array){
 
     }
-    public static function numberElements(){
+    public static function numberElements($array){
 
     }
-    public static function getElementsBetween(){
+    public static function getElementsBetween($array, $from, $to){
 
     }
-    public static function keyExists(){
+    public static function keyExists($array, $key){
 
     }
-    public static function valueExists(){
+    public static function valueExists($array, $value){
 
     }
 } 
