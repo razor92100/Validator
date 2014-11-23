@@ -13,6 +13,10 @@ namespace JB\Validator;
  * Class ArrayValidator
  * @package JB\Validator
  */
+/**
+ * Class ArrayValidator
+ * @package JB\Validator
+ */
 class ArrayValidator
 {
     /**
@@ -37,10 +41,30 @@ class ArrayValidator
     public static function getElementsBetween($array, $from, $to) {
 
     }
+
+    /**
+     * @param array $array
+     * @param $key
+     * @return bool
+     */
     public static function keyExists($array, $key) {
-
+        if (array_key_exists($key, $array)) {
+            return true;
+        }else {
+            return false;
+        }
     }
-    public static function valueExists($array, $value) {
 
+    /**
+     * @param array $array
+     * @param $value
+     * @return bool
+     */
+    public static function valueExists($array, $value) {
+        if (in_array($value, $array)) {
+            return true;
+        }else {
+            return false;
+        }
     }
 } 
