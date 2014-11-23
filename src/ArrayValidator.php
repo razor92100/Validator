@@ -19,8 +19,8 @@ class ArrayValidator
      * @param array $array
      * @return bool
      */
-    public static function isEmpty($array){
-        if (empty($array)){
+    public static function isEmpty($array) {
+        if (empty($array)) {
             return true;
         }else {
             return false;
@@ -30,17 +30,17 @@ class ArrayValidator
     /**
      * @param array $array
      */
-    public static function numberElements($array){
+    public static function numberElements($array) {
         $nbElements = array_count_values($array);
         echo $nbElements;
     }
-    public static function getElementsBetween($array, $from, $to){
+    public static function getElementsBetween($array, $from, $to) {
 
     }
-    public static function keyExists($array, $key){
+    public static function keyExists($array, $key) {
 
     }
-    public static function valueExists($array, $value){
+    public static function valueExists($array, $value) {
 
     }
 } 
