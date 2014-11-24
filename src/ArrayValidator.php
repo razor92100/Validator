@@ -35,11 +35,26 @@ class ArrayValidator
      * @param array $array
      */
     public static function numberElements($array) {
-        $nbElements = array_count_values($array);
+        $nbElements = count($array);
         echo $nbElements;
     }
-    public static function getElementsBetween($array, $from, $to) {
 
+    /**
+     * @param array $array
+     * @param $from
+     * @param $to
+     * @return bool
+     */
+    public static function getElementsBetween($array, $from, $to) {
+        if (count($array) > $from) {
+            if (count($array) < $to) {
+                return true;
+            }else {
+                return false;
+            }
+        }else {
+            return false;
+        }
     }
 
     /**
