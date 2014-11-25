@@ -38,15 +38,17 @@ class ArrayValidator
     /**
      * @param $array
      *
+     * @return int
+     *
      * @throws \Exception
      */
     public static function numberElements($array)
     {
         if (!is_array($array)) {
             throw new \Exception('$array must be an array');
-        }else{
+        }else {
             $nbElements = count($array);
-            echo $nbElements;
+            return $nbElements;
         }
     }
 
@@ -64,7 +66,7 @@ class ArrayValidator
         if( !is_array($array) || !is_int($from) || !is_int($to)) {
             throw new \Exception('$array must be an array and $from, $to must be integer');
         }else {
-            if (count($array) > (int) $from) {
+            if (count($array) > $from) {
                 if (count($array) < $to) {
                     return true;
                 }else {
