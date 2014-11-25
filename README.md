@@ -1,4 +1,6 @@
 # Validator
+[![Build Status](https://scrutinizer-ci.com/g/razor92100/Validator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/razor92100/Validator/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/razor92100/Validator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/razor92100/Validator/?branch=master)
 
 *Validator is a small library that allow you to validate lots of data like integer, string, boolean, array and DateTime.
 Validator is simply to use, just call the method which correspond to your validation wishes and see if you're good or not.*

@@ -44,7 +44,7 @@ class ArrayValidator
      */
     public static function numberElements($array)
     {
-        if (!is_array($array)) {
+        if (false === is_array($array)) {
             throw new \Exception('$array must be an array');
         }else {
             $nbElements = count($array);
@@ -63,7 +63,7 @@ class ArrayValidator
      */
     public static function getElementsBetween($array, $from, $to)
     {
-        if( !is_array($array) || !is_int($from) || !is_int($to)) {
+        if( false === is_array($array) || false === is_int($from) || false === is_int($to)) {
             throw new \Exception('$array must be an array and $from, $to must be integer');
         }else {
             if (count($array) > $from) {
@@ -88,7 +88,7 @@ class ArrayValidator
      */
     public static function keyExists($array, $key)
     {
-        if( !is_array($array)) {
+        if( false === is_array($array)) {
             throw new \Exception('$array must be an array');
         }else {
             if (array_key_exists($key, $array)) {
@@ -109,7 +109,7 @@ class ArrayValidator
      */
     public static function valueExists($array, $value)
     {
-        if( !is_array($array)) {
+        if( false === is_array($array)) {
             throw new \Exception('$array must be an array');
         }else {
             if (in_array($value, $array)) {
