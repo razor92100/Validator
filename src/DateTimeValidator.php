@@ -13,6 +13,7 @@ class DateTimeValidator
 {
     public static function isMajor($date)
     {
+
     }
     public static function isMinor($date)
     {
