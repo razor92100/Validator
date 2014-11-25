@@ -20,7 +20,8 @@ class StringValidator
      * @param int $length
      * @return bool
      */
-    public static function lengthIsEqualTo($string, $length) {
+    public static function lengthIsEqualTo($string, $length)
+    {
         if ($length === mb_strlen($string)) {
             return true;
         }else {
@@ -33,7 +34,8 @@ class StringValidator
      * @param int $limit
      * @return bool
      */
-    public static function lengthIsSuperiorTo($string, $limit) {
+    public static function lengthIsSuperiorTo($string, $limit)
+    {
         $length = mb_strlen($string);
         if ($limit < $length) {
             return true;
@@ -47,7 +49,8 @@ class StringValidator
      * @param int $limit
      * @return bool
      */
-    public static function lengthIsInferiorTo($string, $limit) {
+    public static function lengthIsInferiorTo($string, $limit)
+    {
         $length = mb_strlen($string);
         if ($limit > $length) {
             return true;
@@ -62,7 +65,8 @@ class StringValidator
      * @param int $max
      * @return bool
      */
-    public static function lengthBetween($string, $min, $max) {
+    public static function lengthBetween($string, $min, $max)
+    {
         $length = mb_strlen($string);
         if ($min <= $length) {
             if ($max >= $length) {
@@ -79,7 +83,8 @@ class StringValidator
      * @param string $string
      * @return bool
      */
-    public static function noWhiteSpaceBeginAndEnd($string) {
+    public static function noWhiteSpaceBeginAndEnd($string)
+    {
         $firstChar = substr($string, 0, 1);
         $lastChar = substr($string, -1);
         if (ctype_space($firstChar) && ctype_space($lastChar)) {
@@ -93,7 +98,8 @@ class StringValidator
      * @param string $string
      * @return bool
      */
-    public static function noWhiteSpace($string) {
+    public static function noWhiteSpace($string)
+    {
         if (strpos($string, ' ') == false) {
             return true;
         }else {

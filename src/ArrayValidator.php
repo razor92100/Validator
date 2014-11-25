@@ -8,11 +8,6 @@
 
 namespace JB\Validator;
 
-
-/**
- * Class ArrayValidator
- * @package JB\Validator
- */
 /**
  * Class ArrayValidator
  * @package JB\Validator
@@ -23,7 +18,8 @@ class ArrayValidator
      * @param array $array
      * @return bool
      */
-    public static function isEmpty($array) {
+    public static function isEmpty($array)
+    {
         if (empty($array)) {
             return true;
         }else {
@@ -34,7 +30,8 @@ class ArrayValidator
     /**
      * @param array $array
      */
-    public static function numberElements($array) {
+    public static function numberElements($array)
+    {
         $nbElements = count($array);
         echo $nbElements;
     }
@@ -45,7 +42,8 @@ class ArrayValidator
      * @param $to
      * @return bool
      */
-    public static function getElementsBetween($array, $from, $to) {
+    public static function getElementsBetween($array, $from, $to)
+    {
         if (count($array) > $from) {
             if (count($array) < $to) {
                 return true;
@@ -62,7 +60,8 @@ class ArrayValidator
      * @param $key
      * @return bool
      */
-    public static function keyExists($array, $key) {
+    public static function keyExists($array, $key)
+    {
         if (array_key_exists($key, $array)) {
             return true;
         }else {
@@ -75,7 +74,8 @@ class ArrayValidator
      * @param $value
      * @return bool
      */
-    public static function valueExists($array, $value) {
+    public static function valueExists($array, $value)
+    {
         if (in_array($value, $array)) {
             return true;
         }else {
