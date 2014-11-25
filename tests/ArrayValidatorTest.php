@@ -10,7 +10,14 @@ namespace Tests\JB\Validator;
 
 use JB\Validator;
 
-class ArrayValidatorTest
+class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
 {
+    public function testIsEmpty()
+    {
+        $array = array();
 
+        $test = Validator\ArrayValidator::isEmpty($array);
+
+        $this->assertTrue($test);
+    }
 } 

@@ -14,72 +14,107 @@ namespace JB\Validator;
  */
 class ArrayValidator
 {
+
     /**
      * @param array $array
+     *
      * @return bool
+     *
+     * @throws \Exception
      */
     public static function isEmpty($array)
     {
-        if (empty($array)) {
-            return true;
+        if (!is_array($array)) {
+            throw new \Exception('$array must be an array');
         }else {
-            return false;
+            if (empty($array)) {
+                return true;
+            }else {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * @param $array
+     *
+     * @throws \Exception
+     */
+    public static function numberElements($array)
+    {
+        if (!is_array($array)) {
+            throw new \Exception('$array must be an array');
+        }else{
+            $nbElements = count($array);
+            echo $nbElements;
         }
     }
 
     /**
      * @param array $array
-     */
-    public static function numberElements($array)
-    {
-        $nbElements = count($array);
-        echo $nbElements;
-    }
-
-    /**
-     * @param array $array
-     * @param $from
-     * @param $to
+     * @param int $from
+     * @param int $to
+     *
      * @return bool
+     *
+     * @throws \Exception
      */
     public static function getElementsBetween($array, $from, $to)
     {
-        if (count($array) > $from) {
-            if (count($array) < $to) {
-                return true;
+        if( !is_array($array) || !is_int($from) || !is_int($to)) {
+            throw new \Exception('$array must be an array and $from, $to must be integer');
+        }else {
+            if (count($array) > (int) $from) {
+                if (count($array) < $to) {
+                    return true;
+                }else {
+                    return false;
+                }
             }else {
                 return false;
             }
-        }else {
-            return false;
         }
     }
 
     /**
      * @param array $array
      * @param $key
+     *
      * @return bool
+     *
+     * @throws \Exception
      */
     public static function keyExists($array, $key)
     {
-        if (array_key_exists($key, $array)) {
-            return true;
+        if( !is_array($array)) {
+            throw new \Exception('$array must be an array');
         }else {
-            return false;
+            if (array_key_exists($key, $array)) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 
     /**
      * @param array $array
      * @param $value
+     *
      * @return bool
+     *
+     *  @throws \Exception
      */
     public static function valueExists($array, $value)
     {
-        if (in_array($value, $array)) {
-            return true;
+        if( !is_array($array)) {
+            throw new \Exception('$array must be an array');
         }else {
-            return false;
+            if (in_array($value, $array)) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 } 
