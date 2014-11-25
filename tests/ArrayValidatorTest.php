@@ -10,7 +10,7 @@ namespace Tests\JB\Validator;
 
 use JB\Validator;
 
-class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
+class ArrayValidatorTest
 {
 
 } 

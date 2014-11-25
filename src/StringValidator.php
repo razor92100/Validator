@@ -87,7 +87,7 @@ class StringValidator
     {
         $firstChar = substr($string, 0, 1);
         $lastChar = substr($string, -1);
-        if (ctype_space($firstChar) && ctype_space($lastChar)) {
+        if (!ctype_space($firstChar) && !ctype_space($lastChar)) {
             return true;
         }else {
             return false;
