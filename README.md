@@ -102,5 +102,40 @@ var_dump($validation);
 
 ```
 
+*************************************************
+#### ArrayValidator
+*************************************************
+List of ArrayValidator methods :
+  - isEmpty()
+  - numberElements()
+  - getElementsBetween()
+  - keyExists()
+  - valueExists()
+
+```php
+<?php
+
+// Here we check if the array is empty
+$validation = \JB\Validator\ArrayValidator::isEmpty($array);
+
+// Here we check how many elements there are in the array
+$validation = \JB\Validator\ArrayValidator::numberElements($array);
+
+// Here we check if there are elements between the bornes
+$validation = \JB\Validator\ArrayValidator::getElementsBetween($array, $from, $to);
+
+// Here we check if the key exists in the array
+$validation = \JB\Validator\ArrayValidator::keyExists($array, $key);
+
+// Here we check if the value exists in the array
+$validation = \JB\Validator\ArrayValidator::valueExists($array, $value);
+
+
+// Debug $validation to see the result
+var_dump($validation);
+
+```
+
+
 ### Hope you enjoy it !
 *******************************************************
